@@ -7,10 +7,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="eureka-client" />
+        <module name="eureka-server" />
+        <module name="serice-feign" />
+        <module name="server-zipkin" />
+        <module name="service-hi" />
+        <module name="service-ribbon" />
+        <module name="zipkin-tm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="serice-feign" target="1.8" />
+      <module name="server-zipkin" target="1.8" />
+      <module name="service-hi" target="1.8" />
+      <module name="service-ribbon" target="1.8" />
+      <module name="zipkin-tm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
