@@ -39,7 +39,7 @@ public class RedisApplicationTests {
     public void testCache() {
         User user;
         user = userService.getUser("Ttomm");
-        user = userService.getUser("Ttomm");
+        user = userService.getUser("Ttomm2");
         user = userService.getUser("Ttomm");
     }
 
