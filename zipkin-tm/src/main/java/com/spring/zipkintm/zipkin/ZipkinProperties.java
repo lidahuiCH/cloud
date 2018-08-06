@@ -1,12 +1,10 @@
 package com.spring.zipkintm.zipkin;
+
 import com.github.kristofa.brave.Brave;
 import com.github.kristofa.brave.EmptySpanCollectorMetricsHandler;
 import com.github.kristofa.brave.Sampler;
 import com.github.kristofa.brave.SpanCollector;
 import com.github.kristofa.brave.http.DefaultSpanNameProvider;
-import static com.github.kristofa.brave.Brave.Builder;
-import static com.github.kristofa.brave.http.HttpSpanCollector.Config;
-import static com.github.kristofa.brave.http.HttpSpanCollector.create;
 import com.github.kristofa.brave.okhttp.BraveOkHttpRequestResponseInterceptor;
 import com.github.kristofa.brave.servlet.BraveServletFilter;
 import lombok.Data;
@@ -14,6 +12,10 @@ import okhttp3.OkHttpClient;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import static com.github.kristofa.brave.Brave.Builder;
+import static com.github.kristofa.brave.http.HttpSpanCollector.Config;
+import static com.github.kristofa.brave.http.HttpSpanCollector.create;
 
 /**
  * @program: zjsz-user

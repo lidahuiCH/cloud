@@ -26,17 +26,18 @@ public class ServiceHiApplication {
     private RestTemplate restTemplate;
 
     @Bean
-    public RestTemplate getRestTemplate(){
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 
     @RequestMapping("/hi")
-    public String callHome(){
+    public String callHome() {
         LOG.log(Level.INFO, "calling trace service-hi  ");
         return restTemplate.getForObject("http://localhost:8989/miya", String.class);
     }
+
     @RequestMapping("/info")
-    public String info(){
+    public String info() {
         LOG.log(Level.INFO, "calling trace service-hi ");
 
         return "i'm service-hi";

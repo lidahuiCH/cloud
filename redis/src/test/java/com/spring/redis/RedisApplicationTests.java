@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -19,6 +18,7 @@ public class RedisApplicationTests {
     private RedisTemplate redisTemplate;
     @Autowired
     private UserService userService;
+
     @Test
     //直接使用redisTemplate存取字符串
     public void setAndGet() {
@@ -34,8 +34,8 @@ public class RedisApplicationTests {
         Assert.assertEquals(user.getUsername(), ((User) redisTemplate.opsForValue().get("test:setUser")).getUsername());
     }
 
-    @Test
     //使用Redis缓存对象，getUser只会被调用一次
+    @Test
     public void testCache() {
         User user;
         user = userService.getUser("Ttomm");

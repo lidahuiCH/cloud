@@ -1,4 +1,5 @@
 package com.spring.zipkintm.controller;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -22,7 +23,7 @@ public class ZipkinBraveController2 {
     /**
      * @Description: 第二步调用
      * @Param:
-     * @return:  字符串
+     * @return: 字符串
      * @Author: Mr.Yang
      * @Date: 2018/7/3
      */

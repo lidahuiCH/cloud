@@ -9,6 +9,6 @@ public class UserServiceImpl implements UserService {
     @Cacheable(value = "user", key = "'user_'+#username")
     public User getUser(String username) {
         System.out.println(username + "进入实现类获取数据！");
-        return new User("Ttomm", 22);
+        return new User("Ttomm", 17);
     }
 }
