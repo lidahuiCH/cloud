@@ -17,6 +17,7 @@
         <module name="service-hi" />
         <module name="service-ribbon" />
         <module name="zipkin-tm" />
+        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="service-hi" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="zipkin-tm" target="1.8" />
+      <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
