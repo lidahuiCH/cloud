@@ -1,4 +1,4 @@
-package com.spring.email;
+package com.spring.email.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

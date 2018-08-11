@@ -1,4 +1,4 @@
-package com.spring.email;
+package com.spring.email.service;
 
 import javax.mail.MessagingException;
 

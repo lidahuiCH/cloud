@@ -1,5 +1,6 @@
-package com.spring.email;
+package com.spring.email.controller;
 
+import com.spring.email.service.IMailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
