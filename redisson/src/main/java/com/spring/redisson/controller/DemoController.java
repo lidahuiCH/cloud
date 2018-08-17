@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 
 @RestController
 @RequestMapping("/demo")
@@ -25,20 +27,20 @@ public class DemoController {
     @ResponseBody
     @RequestMapping("/lock")
     public String lock(@RequestParam("sid") String serverId) {
-        Long counter = redisTemplate.opsForValue().increment("COUNTER", 1);
+
         RLock lock = redissonClient.getLock("TEST");
         try {
-            lock.lock();
-            logger.info("Request Thread - " + counter + "[" + serverId +"] locked and begun...");
-            Thread.sleep(5000); // 5 sec
-            logger.info("Request Thread - " + counter + "[" + serverId +"] ended successfully...");
+            lock.lock(10, TimeUnit.SECONDS);
+            logger.info("Request Thread - " + "[" + serverId + "] locked and begun...");
+            Thread.sleep(1000); // 5 sec
+            logger.info("Request Thread - " + "[" + serverId + "] ended successfully...");
         } catch (Exception ex) {
             logger.error("Error occurred");
         } finally {
             lock.unlock();
-            logger.info("Request Thread - " + counter + "[" + serverId +"] unlocked...");
+            logger.info("Request Thread - " + "[" + serverId + "] unlocked...");
         }
 
-        return "lock-" + counter + "[" + serverId +"]";
+        return "lock-" + "[" + serverId + "]";
     }
 }
