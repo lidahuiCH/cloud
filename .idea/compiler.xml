@@ -14,6 +14,7 @@
         <module name="eureka-server" />
         <module name="handler" />
         <module name="redis" />
+        <module name="redisson" />
         <module name="serice-feign" />
         <module name="server-zipkin" />
         <module name="service-hi" />
@@ -31,6 +32,7 @@
       <module name="eureka-server" target="1.8" />
       <module name="handler" target="1.8" />
       <module name="redis" target="1.8" />
+      <module name="redisson" target="1.8" />
       <module name="serice-feign" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="service-hi" target="1.8" />
