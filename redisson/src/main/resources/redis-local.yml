@@ -1,3 +1,4 @@
+#单Redis节点模式
 ---
 singleServerConfig:
   idleConnectionTimeout: 10000
